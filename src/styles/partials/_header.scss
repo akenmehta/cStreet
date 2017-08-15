@@ -1,4 +1,36 @@
 $global-red: darkcyan;
-h1 {
-	color: $global-red;
+header {
+	background-color: #1a325d;
+	padding: 10px 0;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	width: 40px;
+	img {
+		width: 100%;
+	}
+}
+.nav-menu ul {
+	display: flex;
+	li {
+		margin-right: 15px;
+		font-weight: bold;
+		color: #fff;
+		letter-spacing: 0.1em;
+	}
+}
+.header-text {
+	background-color: #1a325d;
+	padding: 50px 0;
+	color: #fff;
+	h2 {
+		text-align: center;
+	}
+	h5 {
+		text-align: right;
+	}
 }
