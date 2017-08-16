@@ -1,11 +1,33 @@
+body {
+	font-size: 1em;
+	font-family: 'Lora', 'Times New Roman';
+	@media (max-width: 768px) {
+		font-size: 0.8em;
+	}
+}
+.invisible {
+	display: none;
+}
 .wrapper {
-	max-width: 1200px;
+	max-width: 1175px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 .uppercase {
 	text-transform: uppercase;
 }
+.biggest-text {
+	font-size: 2.5em;
+}
+.big-text {
+	font-size: 2em;
+	font-style: italic;
+	font-weight: normal;
+}
+.medium-text {
+	font-size: 1.5em;
+}
 .small-text {
 	font-size: 0.9em;
+	letter-spacing: 0.1em;
 }

@@ -1,4 +1,29 @@
 var app = {};
+app.windowSize = $(window).width();
+
+app.toogleMenu = function() {
+	$('.menu-button').on('click', function() {
+		$('.nav-menu').toggleClass('invisible');
+	})
+};
+
+app.showNavBtn = function() {
+	if(app.windowSize <= 751) {
+		$('.menu-button').removeClass('invisible');
+		$('.nav-menu').addClass('invisible');
+	}
+	else {
+		$('.menu-button').addClass('invisible');
+		$('.nav-menu').removeClass('invisible');
+	}
+};
+
+app.windowResize = function() {
+	$(window).resize(function() {
+  		app.windowSize = $(window).width();
+  		app.showNavBtn();
+	});
+};
 
 app.partners = function() {
 	$('.partners').slick({
@@ -7,6 +32,7 @@ app.partners = function() {
 		  slidesToScroll: 4
 		});
 };
+
 app.mainImageCarousel = function() {
 	// $('.main-image-carousel').slick({
 	//   dots: true,		
@@ -69,7 +95,10 @@ app.mainImageCarousel = function() {
 app.init = function() {
 	app.mainImageCarousel();
 	app.partners();
-}
+	app.toogleMenu();
+	app.showNavBtn();
+	app.windowResize();
+};
 
 $(function() {
 	app.init();

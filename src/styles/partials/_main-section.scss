@@ -19,11 +19,17 @@
     background-position: center center;
     color: #fff;
     a {
-    	color: #fff;
+    	color: #f47f62;
+    	font-weight: bold;
+    	letter-spacing: 0.1em;
+    	font-size: 1.1em;
     }
 }
 .quote {
 	max-width: 15%;
+	@media (max-width: 768px) {
+		max-width: 50%;
+	}
 }
 .partners {
 	margin-bottom: 80px;
@@ -42,12 +48,13 @@
 .slick-arrow {
 	display: block;
 	width: 20px;
-	background-color: #475ea3;
+	background-color: #9eabd5;
 	border-radius: 100%;
 	border: none;
 	&:hover {
-		background: #475ea3;
+		background: #9eabd5;
 	}
 }
+
 
 
