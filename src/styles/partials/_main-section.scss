@@ -11,6 +11,9 @@
 .image-container {
 	margin-right: 30px;
 	width: 300px;
+	outline: none;
+	text-decoration: none;
+	border: 0;
 }
 .case-study {
 	padding: 180px 0;
@@ -26,7 +29,7 @@
     }
 }
 .quote {
-	max-width: 15%;
+	max-width: 30%;
 	@media (max-width: 768px) {
 		max-width: 50%;
 	}
@@ -44,6 +47,9 @@
 			filter: none;
 		}
 	}
+	outline: none;
+	text-decoration: none;
+	border: 0;
 }
 .slick-arrow {
 	display: block;

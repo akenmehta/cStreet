@@ -29,56 +29,37 @@ app.partners = function() {
 	$('.partners').slick({
 		  infinite: true,
 		  slidesToShow: 4,
-		  slidesToScroll: 4
-		});
+		  slidesToScroll: 4,
+		  responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        slidesToShow: 3
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 2
+	      }
+	    }
+	  ]
+	});
+};
+
+app.carouselClicked = function() {
+	app.imageCarouselCenter();
+	$('.main-image-carousel').click(function() {
+		app.imageCarouselCenter();
+	});
+};
+
+app.imageCarouselCenter = function() {
+	$('.image-container').css('opacity', '0.4');
+	$('.main-image-carousel .slick-center').css('opacity', '1');
 };
 
 app.mainImageCarousel = function() {
-	// $('.main-image-carousel').slick({
-	//   dots: true,		
-	//   centerMode: true,
-	//   centerPadding: '60px',
-	//   slidesToShow: 5,
-
-	//   responsive: [
-	//   	{
-	//       breakpoint: 1500,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 4
-	//       }
-	//     },
-	//     {
-	//       breakpoint: 1200,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 3
-	//       }
-	//     },
-	//     {
-	//       breakpoint: 860,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 2
-	//       }
-	//     },
-	//     {
-	//       breakpoint: 480,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 1
-	//       }
-	//     }
-	//   ]
-	// });
 	$('.main-image-carousel').slick({
 	 	dots: true,
 	 	infinite: true,
@@ -98,6 +79,7 @@ app.init = function() {
 	app.toogleMenu();
 	app.showNavBtn();
 	app.windowResize();
+	app.carouselClicked();
 };
 
 $(function() {
