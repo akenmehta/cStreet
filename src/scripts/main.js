@@ -49,7 +49,7 @@ app.partners = function() {
 
 app.carouselClicked = function() {
 	app.imageCarouselCenter();
-	$('.main-image-carousel').click(function() {
+	$('.main-image-carousel .image-container').click(function() {
 		app.imageCarouselCenter();
 	});
 };
